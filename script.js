@@ -51,7 +51,7 @@ const style = document.createElement("style");
 style.innerHTML = `
 .dark-mode {
   background: #121212;
-  color: #f1f1f1;
+  color: #d71e1e;
 }
 .dark-mode .navbar,
 .dark-mode .card,
@@ -69,3 +69,16 @@ style.innerHTML = `
 }
 `;
 document.head.appendChild(style);
+
+
+  function sendMail() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const subject = encodeURIComponent("Message from " + name);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+
+    window.location.href = `mailto:roohwear.india@gmail.com?subject=${subject}&body=${body}`;
+    return false;
+  }

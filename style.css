@@ -113,11 +113,6 @@ section[id] {
   padding: 1rem;
 }
 
-.hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-}
-
 .hero-title span {
   color: var(--accent);
 }
@@ -344,4 +339,36 @@ section[id] {
   .features {
     justify-content: center;
   }
+}
+
+
+.simple-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1 1 250px;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #555;
+}
+
+.contact-info a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  flex: 1 1 300px;
 }
